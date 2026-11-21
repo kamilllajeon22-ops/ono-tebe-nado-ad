@@ -1,1 +1,284 @@
-/* место для вашего кода */
+/* ===== Общие ===== */
+body {
+  font-size: 17px;
+  line-height: 1.4;
+  color: #000;
+  background-color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Адрес (шапка и подвал) ===== */
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+/* ===== Шапка ===== */
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 22px 48px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.header__links-list-item {
+  margin-left: 20px;
+  list-style: circle;
+}
+
+.header__links-list-item_no-bullit {
+  margin-left: 0;
+  list-style: none;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo {
+  display: block;
+  width: 130px;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 250px;
+}
+
+/* ===== Обложка ===== */
+.cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 750px;
+  padding: 48px;
+  color: #fff;
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cover__title,
+.cover__description {
+  position: relative;
+  z-index: 1;
+}
+
+.cover__title {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.cover__description-text {
+  text-transform: uppercase;
+  word-spacing: 22px;
+}
+
+.bet-button {
+  padding: 22px 32px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+/* ===== Лоты ===== */
+.lots {
+  padding: 64px 27px;
+}
+
+.lots__heading {
+  margin-bottom: 48px;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 32px;
+  list-style: none;
+}
+
+.lots__card-list-item {
+  width: 330px;
+  min-height: 590px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+  padding: 38px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 1;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.card__text {
+  font-size: 17px;
+}
+
+/* ===== Об аукционе ===== */
+.about {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 48px;
+  padding: 48px 27px;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about__logo-image {
+  width: 144px;
+}
+
+.about__title {
+  margin: 32px 0 96px;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 700px;
+  font-size: 17px;
+}
+
+/* ===== Подвал ===== */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 80px 48px;
+}
+
+.footer__address {
+  justify-self: start;
+  max-width: 250px;
+}
+
+.footer__menu {
+  justify-self: center;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-self: end;
+  gap: 26px;
+  list-style: none;
+}
+
+.footer__social-link {
+  display: block;
+  width: 50px;
+}
+
